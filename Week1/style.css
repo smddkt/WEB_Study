@@ -1,0 +1,124 @@
+body{
+    margin:0;
+    font-family: "Gowun Batang", serif;
+    font-weight: 100;
+    font-style: normal;
+    background-color:rgb(160, 214, 235);
+    width: 100%;
+    line-height: 200%;
+}
+a {
+    color:black;
+    text-decoration: none;
+    
+}
+
+a:link {
+    color : rgb(0, 0, 0);
+  }
+a:visited {
+    color : black;
+  }
+a:hover {
+    color : rgb(255, 95, 95);
+  }
+
+#sawactive {
+    color : rgb(255, 95, 95);
+    font-size: 20px;
+    }
+
+#intro {
+    text-align: center;
+    font-size: 130%;
+    font-weight: 600;
+    border: 3px white solid;
+    padding-bottom: 70px;
+    padding-top: 20px;
+    background-color:rgb(250, 229, 215);
+    margin-left:15%;
+    margin-right:15%;
+    margin-bottom: 200px;
+    margin-top:100px;
+}
+
+h1 {
+    font-size: 50px;
+    margin: 90px;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+h4{ text-align: center;
+    border-bottom: 3px black solid;
+    display: block;
+    padding:50px;
+    margin:0;
+    padding-top: 20px;
+    font-size: 20px;
+    margin-left: 5%;
+    margin-right: 5%;
+
+}
+ul{
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 15%;
+    margin-left:15%;
+    margin-right:15%;
+    list-style-type: none;
+    font-weight: bold;
+    font-size: 120%;
+}
+
+#grid1 #article{
+    text-align: center;
+    padding-left: 20px;
+}
+
+#grid2{
+    margin-left:15%;
+    margin-right:15%;
+}
+
+
+#menu{
+    list-style-type: none;
+    text-align: center;
+    font-weight: bold;
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+
+
+@media (max-width:400px){
+    #grid1{
+        display: block;
+    }
+    #grid1 ol{
+        text-align: center;
+        border-right: none;
+        width: 200px;
+        margin: 20px;
+        padding: 20px;
+        padding-left: 15px;
+    }
+    h1 {
+        border-bottom: none;
+    }
+
+}
+img{
+    padding-top:40px;
+}
+
+.gowun-batang-regular {
+    font-family: "Gowun Batang", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
