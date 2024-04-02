@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <style>
+        body{
+            display:flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .container{
+            display: flex;
+            flex-direction:column;
+            width: 800px;
+            border: 1px solid gray;
+        }
+        header{
+            border-bottom:1px solid gray;
+            padding-left:20px;
+        }
+        footer{
+            border-top:1px solid gray;
+            padding:20px;
+            text-align: center;
+        }
+        .content{
+            display: flex;
+            flex-direction: row;
+            flex-grow:1;
+        }
+        nav{
+            border-right:1px solid gray;
+
+        }
+        aside{
+            border-left: 1px solid gray;
+        }
+        nav, aside{
+            flex-basis: 150px;
+            flex-shrink:0;
+        }
+        main{
+            padding:10px;
+        }
+        nav{
+            order:-1;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>생활코딩</h1>
+        </header>
+        <section class="content">
+            <nav>
+                <ul>
+                    <li>html</li>
+                    <li>css</li>
+                    <li>javascript</li>
+                </ul>
+            </nav>
+            <main>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque eveniet, iure provident voluptatum incidunt, obcaecati quae aut ducimus expedita, facere aperiam. Aliquid eos molestias tempora obcaecati perferendis nihil esse provident vero praesentium architecto adipisci ab, quod unde temporibus tenetur veniam sequi voluptatum mollitia? Sapiente, fuga. Possimus temporibus quidem quibusdam obcaecati! Laborum unde voluptates rem inventore. Ipsa provident est autem eos, at impedit praesentium obcaecati porro eaque molestias, ipsam totam libero maxime sit, beatae accusamus omnis consequuntur voluptas? At deleniti explicabo reprehenderit. Corporis nulla, tempore hic provident necessita
+
+            </main>
+            <aside>
+                AD
+            </aside>
+        </section>
+        <footer>
+            <a
+            href=https://www.youtube.com/watch?v=8DJBCHro-3Q&list=PLuHgQVnccGMDaVaBmkX0qfB45R_bYrV62&index=37>
+            홈페이지</a>
+
+        </footer>
+
+    </div>
+</body>
+</html>
