@@ -1,0 +1,78 @@
+<!DOCTYdivE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main>
+        <div class="contents">
+        <h1>회원가입</h1>
+        <fieldset>
+            <p>이름</p>
+            <input type="text" id="name">
+        </fieldset>
+
+        <div class="name-success hide green">멋진 이름이에요!</div>
+        <div class="name-failure hide red">필수 입력 항목입니다! </div>
+
+        <fieldset>
+            <p>이메일</p>
+            <input type="text" id="email">
+        </fieldset>
+
+        <div class="email-success hide green">올바른 이메일 형식입니다!</div>
+        <div class="email-failure hide red">올바른 이메일 형식이 아닙니다!</div>
+
+        <fieldset>
+            <p>나이</p>
+            <input type="text" id="age">
+        </fieldset>
+
+        <div class="age-success hide green">올바른 나이 형식입니다!</div>
+        <div class="age-failure1 hide red">나이를 입력해주세요!</div>
+        <div class="age-failure-num hide red">나이는 숫자 형식이어야 합니다!</div>
+        <div class="age-failure-positive hide red">나이는 음수가 될 수 없습니다!</div>
+        <div class="age-failure-dec hide red">나이는 소수가 될 수 없습니다!</div>
+        <div class="age-failure-19 hide red">미성년자는 가입할 수 없습니다!</div>
+
+        <fieldset>
+            <p>비밀번호</p>
+            <input type="password" id="password">
+        </fieldset>
+
+        <div class="pwd-success hide green">올바른 비밀번호입니다!</div>
+        <div class="pwd-failure-min hide red">비밀번호는 최소 4자리 이상이어야 합니다.</div>
+        <div class="pwd-failure-max hide red">비밀번호는 최대 12자리까지 가능합니다.</div>
+        <div class="pwd-failure-mix hide red">영어, 숫자, 특수문자를 모두 조합해서 비밀번호를 작성해야 합니다.</div>
+
+        <fieldset>
+            <p>비밀번호 확인</p>
+            <input type="password" id="passwordConfirm">
+        </fieldset>
+
+        <div class="cpwd-success hide green">비밀번호가 일치합니다.</div>
+        <div class="cpwd-failure hide red">비밀번호가 일치하지 않습니다.</div>
+
+        <fieldset class="signUp">
+            <button>가입하기</button>
+        </fieldset>
+    </div>
+    </main>
+</body>
+
+
+<div class="modal_background" style="display: none;">
+    <div class="modal" style="display: none;">
+        <div class="modal_body">
+            <div class="item"><h2>가입 성공!</h2></div>
+                <div class="item">umc 챌린저 가입을 축하합니다!!</div>
+            <div class="item"><button class = "closeModal">닫기</button></div>
+        </div>
+    </div>
+</div>
+
+<script src="index.js"></script>
+</html>

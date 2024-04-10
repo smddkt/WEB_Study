@@ -1,0 +1,155 @@
+body{
+    background-color: rgb(171, 222, 231);
+}
+
+.hide {
+    display: none;
+    }
+
+.red{
+    color:red;
+    margin:auto;
+    text-align:left;
+    width:40%;
+    
+}
+
+.green{
+    color:green;
+    margin:auto;
+    text-align:left;
+    width:40%;
+}
+
+main{
+    background-color: rgb(225, 244, 250);
+    height: 50vw;
+    width: 60vw;
+    border-radius: 8px;
+    position: absolute;
+    top: 50%; /* 상단을 화면의 50%로 설정 */
+    left: 50%; /* 왼쪽을 화면의 50%로 설정 */
+    transform: translate(-50%, -50%);
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.contents{
+    position:absolute;
+    width: 99%;
+    height: 99%;
+    top: 50%; /* 상단을 화면의 50%로 설정 */
+    left: 50%; /* 왼쪽을 화면의 50%로 설정 */
+    transform: translate(-50%, -50%);
+}
+
+.contents h1{
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+    width: 40%;
+    height: 10%;
+    text-align: center;
+    border-bottom: 2px white solid;
+    font-size: 1.5rem;}
+
+fieldset {
+    padding-top: 1%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin:auto;
+    padding-bottom: 0px;
+    border: 0px;
+    width: 40%;
+    height: 9%;
+  }
+
+p{
+    display: block;
+    width:90%;
+    height:99%;
+    margin:0px;
+}
+
+
+input {
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 5px;
+    background-color: rgb(225, 244, 250);
+    height: 99%;
+    width: 90%;
+    display: block;
+    margin-top: 3px;
+  }
+
+.signUp button {
+    border-radius: 5px;
+    background-color: rgb(86, 85, 85);
+    color:white;
+    margin: auto;
+    display: block;
+    width: 220px;
+    height: 40px;
+}  
+
+
+
+
+
+.modal_background{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+
+.modal{
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    margin: -25px 0 0 -25px; 
+}
+
+
+.modal_body{
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    display: flex;
+    flex-direction:column;
+    height: 170px;
+    width: 390px;
+}
+
+.item{background-color: rgb(255, 255, 255);
+    color:rgb(2, 2, 2);
+    border: 1px solid rgb(255, 255, 255);
+}
+
+
+.item:nth-child(1){
+    text-align: center;
+    margin-top: 10px;
+    display: block;
+}
+
+
+.item:nth-child(2){
+    display: block;
+    align-self: center;
+    font-size: 15px;
+}
+
+.item:nth-child(3){
+    width:45px;
+    display: block;
+    margin-top: auto;
+    margin-bottom: 15px;
+    margin-left: auto;
+    margin-right: 15px;
+}
