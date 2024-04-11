@@ -3,23 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registration page</title>
+    <title>TodoList</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <main>
     <h2>UMC Study Plan</h2>
-    <input type="text" name="id">
-    <div class="box">
-    <div class="item">이름<br><input type="text" name="id"></div>
-    <div class="item">이메일<br>
-    <input type="text" name="email"></div> 
-    <div class="item">나이<br>
-    <input type="text" name="age"></div> 
-    <div class="item">비밀번호<br>
-    <input type="password" name="pwd"></div> 
-    <div class="item">비밀번호 확인<br>
-    <input type="password" name="pwd"></div> 
-    <div><button class = "closeModal">가입하기</button></div>
+    <fieldset>
+        <input type="text" id="input" placeholder="스터디 계획을 작성해 보세요!" onkeypress="add_list(event)">
+    </fieldset>
+
+    <div class="container">
+        <div class="list">
+            <h3>해야할 일</h3>
+            <ul class = "todo-list"> <!--hide 추가하기-->
+                <button class="finished-button hide">완료</button>
+            </ul>
+        </div>
+        <div class="list">
+            <h3>해낸 일</h3>
+            <ul class = "finished-list hide">
+                <button class="delete-button">삭제</button>
+            </ul>
+        </div>
     </div>
+</main>
+<script type="text/javascript" src="index.js"></script>
+
 </body>
 </html>
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header><h1>Todo List</h1></header>
+    <form>
+        <input type="text" class = "todo-list" />
+        <button class = "todo-button" type="submit">
+            <i class="fas fa-plus-square"></i>
+        </button>
+        <div class="select">
+            <select name = "todos" class = "filter-todo">
+                <option value="all">All</option>
+                <option value="completed">해낸 일</option>
+                <option value="uncomplited">해야할 일</option>
+            </select>
+        </div>
+    </form>
+    <div class = "todo-container">
+        <ul class="todo-list"></ul>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html> -->
