@@ -1,0 +1,52 @@
+.mBackground{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+
+.Modal{
+    position: absolute;
+    top: 40%;
+    left: 20%;
+    margin: -25px 0 0 -25px; 
+    background-color: rgb(255, 255, 255);
+    border-radius: 8px;
+    display: flex;
+    flex-direction:column;
+    height: 150px;
+    width: 350px;
+}
+
+
+.mTitle{
+    display: block;
+    flex-basis:auto;
+    flex-grow:0;
+    font-weight: bold;
+    font-size: 22px;
+    margin-top: 20px;
+    margin-left: 15px;
+    margin-bottom: 0px;
+}
+
+
+
+.mContents{
+    display: block;
+    margin-left: 15px;
+    margin-top: 13px;
+    font-size: 14px;
+}
+
+.mButton{
+    position: relative;
+    margin-bottom: 15px;
+    margin-right: 17px;
+    width: 43.9091px;
+    margin-left: 289px;
+    margin-top: 25px;
+}
