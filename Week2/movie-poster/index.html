@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + React</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+    <script>
+      (function(){
+      /*Use Object Detection to detect IE6*/
+      var  m = document.uniqueID /*IE*/
+      document.compatMode  /*>=IE6*/
+      !window.XMLHttpRequest /*<=IE6*/
+      document.execCommand ;
+      try{
+      if(!!m){
+      m("BackgroundImageCache", false, true) /* = IE6 only */
+      }
+      }catch(oh){};
+      })();
+      </script>
+  </body>
+</html>
