@@ -12,6 +12,7 @@ const GlobalStyle = createGlobalStyle`
     color: white;
     font-weight: lighter;
     font-size: 1em;
+    text-decoration-line:none;
   }
 
   a:hover {
@@ -19,6 +20,9 @@ const GlobalStyle = createGlobalStyle`
     font-weight: bolder;
     color: white;
     text-decoration-line:none;
+  }
+  a:visited {
+    color: white;
   }
 `;
 

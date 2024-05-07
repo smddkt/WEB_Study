@@ -1,15 +1,17 @@
 /*eslint-disable*/
 import { Link } from 'react-router-dom';
 import React from 'react';
-import { StyledNavContainer, StyledNavBar, StyledNavList } from './components/StyledNavBar';
+import { StyledNavContainer, StyledNavBar, StyledHomeButton, StyledNavList } from './components/StyledNavBar';
 
 function Nav() {
     return (
         <div>
         <StyledNavContainer>
+            <StyledHomeButton>
             <li>
                 <Link to='/'>UMC Movie</Link>
             </li>
+            </StyledHomeButton>
             <StyledNavBar>
                 <StyledNavList>
                     <Link to='/'>회원가입</Link>

@@ -2,7 +2,7 @@
 import styled from 'styled-components';
 
 const StyledAppContainer = styled.div`
-    margin-top: 200px;
+    margin-top: 70px;
     position: absolute;
     z-index: 0;
     top: 0;
