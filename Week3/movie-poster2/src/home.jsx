@@ -1,4 +1,3 @@
-import './App.css';
 import Banner from "./components/Banner";
 import Search1 from "./components/Search1";
 function Home() {

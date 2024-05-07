@@ -1,13 +1,13 @@
+/*eslint-disable*/
 import Movie from './components/Movie';
-import './Pages.css';
-
 import {popular} from './api/Popular';
+import StyledAppContainer from './components/StyledDisplay.js';
 
 function DisplayPopular() {
 
   return (
       <div>
-        <div className="app-container">
+        <StyledAppContainer>
           {popular.results.map((item)=>{
             return (
                 <Movie
@@ -17,7 +17,7 @@ function DisplayPopular() {
                 />
             )
           })}
-        </div>
+        </StyledAppContainer>
       </div>
   )
 }

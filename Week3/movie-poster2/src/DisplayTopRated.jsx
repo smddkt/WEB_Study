@@ -1,13 +1,13 @@
+/*eslint-disable*/
 import Movie from './components/Movie';
-import './Pages.css'
-
 import { toprated } from './api/TopRated';
+import StyledAppContainer from './components/StyledDisplay.js';
 
 function DisplayTopRated() {
 
-  return (
+  return ( 
     <div>
-      <div className="app-container">
+      <StyledAppContainer>
         {toprated.results.map((item) => {
           return (
             <Movie
@@ -15,9 +15,9 @@ function DisplayTopRated() {
               poster_path={item.poster_path}
               vote_average={item.vote_average}
             />
-          )
-        })}
-      </div>
+          ) 
+        })} 
+      </StyledAppContainer>
     </div>
   )
 }

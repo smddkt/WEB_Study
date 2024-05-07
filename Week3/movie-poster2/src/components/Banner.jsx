@@ -1,12 +1,9 @@
+//eslint-disable-next-line
 import React from 'react';
-import '../App.css';
+import StyledBanner from './StyledBanner.js';
 
 function Banner() {
-    return (
-        <h1 className="Banner">
-          환영합니다
-        </h1>
-    )
+  return <StyledBanner>환영합니다</StyledBanner>;
 }
 
-export default Banner
+export default Banner;

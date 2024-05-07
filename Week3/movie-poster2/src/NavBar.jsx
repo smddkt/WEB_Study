@@ -1,33 +1,33 @@
+/*eslint-disable*/
 import { Link } from 'react-router-dom';
 import React from 'react';
+import { StyledNavContainer, StyledNavBar, StyledNavList } from './components/StyledNavBar';
 
 function Nav() {
     return (
         <div>
-        <div className="nav-container">
-            <div className = "home-button">
+        <StyledNavContainer>
             <li>
                 <Link to='/'>UMC Movie</Link>
             </li>
-            </div>
-            <nav className="navbar">
-                <li className='navlist'>
+            <StyledNavBar>
+                <StyledNavList>
                     <Link to='/'>회원가입</Link>
-                </li>
-                <li className='navlist'>
+                </StyledNavList>
+                <StyledNavList>
                     <Link to='/displaypopular'>Popular</Link>
-                </li>
-                <li className='navlist'>
+                </StyledNavList>
+                <StyledNavList>
                     <Link to='/displaynowplaying'>Now Playing</Link>
-                </li>
-                <li className='navlist'>
+                </StyledNavList>
+                <StyledNavList>
                     <Link to='/displaytoprated'>Top Rated</Link>
-                </li>
-                <li className='navlist'>
+                </StyledNavList>
+                <StyledNavList>
                     <Link to='/displayupcoming'>Upcoming</Link>
-                </li>
-            </nav>
-        </div>
+                </StyledNavList>
+            </StyledNavBar>
+        </StyledNavContainer>
         </div>
     )
 }

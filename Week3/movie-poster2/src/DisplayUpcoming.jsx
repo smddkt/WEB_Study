@@ -1,13 +1,13 @@
+/*eslint-disable*/
 import Movie from './components/Movie';
-import './Pages.css'
-
 import {upcoming} from './api/Upcoming';
+import StyledAppContainer from './components/StyledDisplay.js';
 
 function DisplayUpcoming() {
 
   return (
       <div>
-        <div className="app-container">
+        <StyledAppContainer>
           {upcoming.results.map((item)=>{
             return (
                 <Movie
@@ -17,7 +17,7 @@ function DisplayUpcoming() {
                 />
             )
           })}
-        </div>
+        </StyledAppContainer>
       </div>
   )
 }

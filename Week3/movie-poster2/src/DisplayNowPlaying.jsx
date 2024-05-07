@@ -1,13 +1,14 @@
+/*eslint-disable*/
 import Movie from './components/Movie';
-import './Pages.css';
 import { nowplaying } from './api/NowPlaying';
+import StyledAppContainer from './components/StyledDisplay.js';
 
 function DisplayNowPlaying() {
 
   return (
     <>
       <div>
-        <div className="app-container">
+        <StyledAppContainer>
           {nowplaying.results.map((item) => {
             return (
               <Movie
@@ -17,7 +18,7 @@ function DisplayNowPlaying() {
               />
             )
           })}
-        </div>
+        </StyledAppContainer>
       </div>
     </>
   )

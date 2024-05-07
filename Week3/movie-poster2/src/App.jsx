@@ -1,6 +1,5 @@
-import './App.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Nav from "./NavBar";
+import Nav from "./NavBar.jsx";
 import Home from "./home";
 import DisplayNowPlaying from './DisplayNowPlaying.jsx';
 import DisplayTopRated from './DisplayTopRated.jsx';
