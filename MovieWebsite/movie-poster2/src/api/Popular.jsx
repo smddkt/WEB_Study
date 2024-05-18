@@ -2,6 +2,7 @@ import axios from 'axios';
 import { useState, useEffect } from 'react';
 import Movie from '../components/Movie.jsx';
 import StyledAppContainer from '../components/StyledDisplay.js';
+import { apiKey } from './myApiKey';
 
 const Popular = () => {
   const [info, setInfo] = useState([]);
@@ -12,8 +13,7 @@ const Popular = () => {
       url: 'https://api.themoviedb.org/3/movie/popular?language=en-US&page=1',
       headers: {
         accept: 'application/json',
-        Authorization:
-          'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2ODgwMDljY2QxYjE3MTUyZWM2MmRlYjQzM2VmNTVjNCIsInN1YiI6IjY2MzNlMWIzZDlmNGE2MDEyY2UyOGRjMiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.RZ1Ar-fshGoidSPk-EDnzCpkKC5w6hOWsaj8mW0k8Dw',
+        Authorization: `Bearer ${apiKey}`,
       },
     };
 
