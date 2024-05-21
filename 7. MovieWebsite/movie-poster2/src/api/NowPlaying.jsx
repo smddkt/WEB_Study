@@ -36,6 +36,8 @@ const NowPlaying = () => {
             title={movie.title}
             poster_path={movie.poster_path}
             vote_average={movie.vote_average}
+            release_date={movie.release_date}
+            overview={movie.overview}
           />
         ))}
       </StyledAppContainer>
