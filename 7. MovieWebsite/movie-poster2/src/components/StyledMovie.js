@@ -3,6 +3,7 @@ import styled from 'styled-components'
     
   
 export const StyledMovieContainer = styled.div`
+    cursor: pointer;
     width: 250px;
     height: 460px;
     margin: 16px;

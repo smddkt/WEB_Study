@@ -1,5 +1,5 @@
-/*eslint-disable*/
 import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import Upcoming from './api/Upcoming.js';
 import {
   StyledMovieContainer,
@@ -7,10 +7,17 @@ import {
 } from './components/StyledMovie';
 import StyledAppContainer from './components/StyledDisplay.js';
 
-const img_base = 'https://image.tmdb.org/t/p/w500/';
+export const img_base = 'https://image.tmdb.org/t/p/w500/';
 
 function DisplayUpcoming() {
   const [movies, setMovies] = useState([]);
+  const navigate = useNavigate();
+
+  const goToDetail = (movie) => {
+    navigate(`/movie/${movie.title}`, {
+      state: movie,
+    });
+  };
 
   useEffect(() => {
     async function fetchData() {
@@ -19,14 +26,13 @@ function DisplayUpcoming() {
         setMovies(data.results);
       }
     }
-
     fetchData();
   }, []);
 
   return (
     <StyledAppContainer>
       {movies.map((movie) => (
-        <StyledMovieContainer key={movie.id}>
+        <StyledMovieContainer key={movie.id} onClick={() => goToDetail(movie)}>
           <img src={img_base + movie.poster_path} alt={movie.title} />
           <StyledMovieInfo>
             <h4>{movie.title}</h4>

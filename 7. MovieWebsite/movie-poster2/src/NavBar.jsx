@@ -27,24 +27,16 @@ function Nav() {
         <StyledNavBar>
           <StyledLoginButton onClick={handleClick}>{text}</StyledLoginButton>
           <StyledNavList>
-            <NavLink to='/displaypopular' activeClassName='active'>
-              Popular
-            </NavLink>
+            <NavLink to='/displaypopular'>Popular</NavLink>
           </StyledNavList>
           <StyledNavList>
-            <NavLink to='/displaynowplaying' activeClassName='active'>
-              Now Playing
-            </NavLink>
+            <NavLink to='/displaynowplaying'>Now Playing</NavLink>
           </StyledNavList>
           <StyledNavList>
-            <NavLink to='/displaytoprated' activeClassName='active'>
-              Top Rated
-            </NavLink>
+            <NavLink to='/displaytoprated'>Top Rated</NavLink>
           </StyledNavList>
           <StyledNavList>
-            <NavLink to='/displayupcoming' activeClassName='active'>
-              Upcoming
-            </NavLink>
+            <NavLink to='/displayupcoming'>Upcoming</NavLink>
           </StyledNavList>
         </StyledNavBar>
       </StyledNavContainer>
