@@ -6,6 +6,7 @@ import DisplayTopRated from './DisplayTopRated.jsx';
 import DisplayPopular from './DisplayPopular.jsx';
 import DisplayUpcoming from './DisplayUpcoming.jsx';
 import DisplayDetails from './DisplayDetails.jsx';
+import RegistrationPage from './RegistrationPage.jsx';
 import NotFound from './NotFound.jsx';
 
 function App() {
@@ -15,6 +16,10 @@ function App() {
         <Nav />
         <Routes>
           <Route exact path='/' element={<Home />}></Route>
+          <Route
+            path='/registrationpage'
+            element={<RegistrationPage />}
+          ></Route>
           <Route
             path='/displaynowplaying'
             element={<DisplayNowPlaying />}

@@ -35,7 +35,7 @@ export const StyledHomeButton = styled.div`
     margin-left: 15px;`
 
 
-export const StyledLoginButton = styled.button`
+export const StyledRegisterButton = styled.button`
     color: #f7d037;
     background-color: rgb(16, 19, 64);
     font-size: 1em;

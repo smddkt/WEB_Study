@@ -1,47 +1,41 @@
 /*eslint-disable*/
 import { NavLink, Link } from 'react-router-dom';
-import React, { useState } from 'react';
+import React from 'react';
 import {
   StyledNavContainer,
   StyledNavBar,
   StyledHomeButton,
   StyledNavList,
-  StyledLoginButton,
-} from './components/StyledNavBar';
+  StyledRegisterButton,
+} from './components/StyledNavBar'; // Ensure this path is correct
 
-function Nav() {
-  const [text, setText] = useState('로그인');
-
-  function handleClick() {
-    setText((prev) => (prev === '로그인' ? '로그아웃' : '로그인'));
-  }
-
+const NavBar = () => {
   return (
-    <div>
-      <StyledNavContainer>
-        <StyledHomeButton>
-          <li>
-            <Link to='/'>UMC Movie</Link>
-          </li>
-        </StyledHomeButton>
-        <StyledNavBar>
-          <StyledLoginButton onClick={handleClick}>{text}</StyledLoginButton>
-          <StyledNavList>
-            <NavLink to='/displaypopular'>Popular</NavLink>
-          </StyledNavList>
-          <StyledNavList>
-            <NavLink to='/displaynowplaying'>Now Playing</NavLink>
-          </StyledNavList>
-          <StyledNavList>
-            <NavLink to='/displaytoprated'>Top Rated</NavLink>
-          </StyledNavList>
-          <StyledNavList>
-            <NavLink to='/displayupcoming'>Upcoming</NavLink>
-          </StyledNavList>
-        </StyledNavBar>
-      </StyledNavContainer>
-    </div>
+    <StyledNavContainer>
+      <StyledHomeButton>
+        <li>
+          <Link to='/'>UMC Movie</Link>
+        </li>
+      </StyledHomeButton>
+      <StyledNavBar>
+        <StyledRegisterButton>
+          <NavLink to='/registrationpage'>회원가입</NavLink>
+        </StyledRegisterButton>
+        <StyledNavList>
+          <NavLink to='/displaypopular'>Popular</NavLink>
+        </StyledNavList>
+        <StyledNavList>
+          <NavLink to='/displaynowplaying'>Now Playing</NavLink>
+        </StyledNavList>
+        <StyledNavList>
+          <NavLink to='/displaytoprated'>Top Rated</NavLink>
+        </StyledNavList>
+        <StyledNavList>
+          <NavLink to='/displayupcoming'>Upcoming</NavLink>
+        </StyledNavList>
+      </StyledNavBar>
+    </StyledNavContainer>
   );
-}
+};
 
-export default Nav;
+export default NavBar;
