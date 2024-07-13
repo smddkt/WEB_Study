@@ -24,6 +24,14 @@ const StyledButton = styled(Button)<ButtonProps>(({theme, bsize, btype}) =>({
         bsize === 'medium' ? '16px':
         bsize === 'small' ? '14px':
         '12px',
+
+    // (스타일드 컴포넌트 문법)
+    // font-size: ${({ bsize }) =>
+    //     bsize === 'large'? '18px':
+    //     bsize === 'medium' ? '16px':
+    //     bsize === 'small' ? '14px':
+    //     '12px'};
+
     lineheight: 
         bsize === 'large' ? '24px':
         bsize === 'medium' ? '20px':
