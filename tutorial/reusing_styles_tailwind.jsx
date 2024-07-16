@@ -32,6 +32,7 @@
   ))}
 </nav>
 
+
 //2.컴포넌트 추출
 
 function Notification({ imageUrl, imageAlt, title, message }) {
@@ -49,7 +50,7 @@ function Notification({ imageUrl, imageAlt, title, message }) {
 }
 
 
-//3. @apply를 사용하여 클래스 추출
+//3. @apply를 사용하여 클래스 추출하는 법
 
 @tailwind base;
 @tailwind components;
