@@ -73,3 +73,15 @@
   높이에 영향을 미치게 된다. 열(column)로 정렬되어 있는 컨테이너에서는 이
   속성들을 사용하지 않는 게 좋다.
 </>;
+
+
+
+<Grid container spacing = {2} columns = {16}>
+    <Grid item xs={8}>
+        <Item>xs=8</Item>
+    </Grid>
+    <Grid item xs={8}>
+        <Item>xs=8</Item>
+    </Grid>
+</Grid>
+//컬럼 값 임의로 지정하기
