@@ -1,0 +1,350 @@
+//https://react.dev/learn/reusing-logic-with-custom-hooks 여기 공부한 내용
+
+
+
+
+
+
+// import { useState, useEffect } from 'react';
+
+
+// export default function StatusBar() {
+//     const [isOnline, setIsOnline] = useState(true);
+//     useEffect(() => {
+//         function handleOnline() {
+//             setIsOnline(true);
+//         }
+
+
+//         function handleOffline() {
+//             setIsOnline(false);
+//         }
+
+
+//         window.addEventListener('online', handleOnline);
+//         window.addEventListener('offline', handleOffline);
+
+
+//         return () => {
+//             window.removeEventListener('online', handleOnline);
+//             window.removeEventListener('offline', handleOffline);
+//         };
+
+
+       
+//     }, []); //처음 마운트될 때만 실행되는 UseEffect 함수.
+
+
+//     return <h1>{isOnline ? 'online' : 'Disconnected' }</h1>;
+// }
+
+
+
+
+
+
+// import { useState, useEffect } from 'react';
+
+
+// export default function SaveButton() {
+//     const [isOnline, setIsOnline] = useState(true);
+//     useEffect(() =>  {
+//         function handleOnline() {
+//             setIsOnline(true);
+//         }
+
+
+//         function handleOffline() {
+//             setIsOnline(false);
+//         }
+      
+//         window.addEventListener('online',  handleOnline);
+//         window.addEventListener('offline', handleOffline);
+
+
+//         return () => {
+//             window.removeEventListener('online', handleOnline);
+//             window.removeEventListener('offline', handleOffline);
+//         };
+//     }, []);
+
+
+//     function handleSaveClick() {
+//         console.log('Progress Saved');
+//     }
+
+
+//     return (
+//         <button disabled = {!isOnline} onClick= {handleSaveClick}>
+//             {isOnline ? 'Save progress' : 'Reconnecting...'}
+//         </button>
+//     );
+// }
+
+
+
+
+
+
+// import { useOnlineStatus } from './useOnlineStatus.js'
+// function StatusBar() {
+//     const isOnline = useOnlineStatus();
+//     return <h1>{isOnline ? 'online' : 'disconnected'}</h1>;
+// }
+
+
+// function SaveButton() {
+//     const isOnline = useOnlineStatus();
+
+
+//     function handleSaveClick() {
+//         console.log('progress saved');
+//     }
+
+
+//     return (
+//         <button disabled= {!isOnline} onClick={handleSaveClick}>
+//             {isOnline ? 'save progress' : 'Reconnecting...'}
+//         </button>
+//     );
+// }
+
+
+
+
+
+
+
+
+
+
+// export default function useOnlineStatus() {
+//     const [isOnline, setIsOnline] = useState(true);
+//     useEffect(() => {
+//       function handleOnline() {
+//         setIsOnline(true);
+//       }
+//       function handleOffline() {
+//         setIsOnline(false);
+//       }
+//       window.addEventListener('online', handleOnline);
+//       window.addEventListener('offline', handleOffline);
+//       return () => {
+//         window.removeEventListener('online', handleOnline);
+//         window.removeEventListener('offline', handleOffline);
+//       };
+//     }, []);
+//     return isOnline;
+//   }
+
+
+
+
+
+
+
+
+
+
+
+
+import {useState} from 'react';
+
+
+export default function Form() {
+   const [firstName, setFirstName] = useState('Mary');
+   const [lastName, setLastName] = useState('Poppins');
+
+
+   function handleFirstNameChange(e) {
+       setFirstName(e.target.value);
+   }
+
+
+   function handleLastNameChange(e) {
+       setLastName(e.target.value);
+   }
+
+
+   return  (
+       <>
+           <label>
+               First name:
+               <input value={firstName} onchange={handleFirstNameChange} />
+           </label>
+           <label>
+               Last Name:
+               <input value={lastName} onChange={handleLastNameChange} />
+           </label>
+           <p><b>Good morning, {firstName} {lastName}.</b></p>
+       </>
+   );
+}
+
+
+import {useFormInput} from './useFormInput.ts'
+export default function Form() {
+   const firstNameProps = useFormInput('Shilpa');
+   const lastNameProps = useFormInput('Sudir');
+
+
+   return  (
+       <>
+           <label>
+               First name:
+               <input {...firstNameProps} />
+           </label>
+           <label>
+               Last Name:
+               <input {...lastNameProps} />
+           </label>
+           <p><b>Good morning, {firstNameProps.value} {lastNameProps.value}.</b></p>
+       </>
+   );
+
+
+}
+
+
+
+
+// import { useFirstName } from './useFirstName.js'
+
+
+
+
+// import {useState, useEffect} from 'react';
+// export default function useFirstName() {
+//     const [firstName, setFirstName] = useState('Shilpa');
+
+
+//     useEffect(() => {
+//         function handleFirstNameChange(e) {
+//             setFirstName(e.target.value);
+//         }
+//     })
+// }
+
+
+export function useFormInput(initialValue) {
+   const [value, setValue] = useState(initialValue);
+
+
+   function handleChange(e) {
+       setValue(e.target.value);
+   }
+
+
+   const inputProps = {
+       value: value,
+       onChange: handleChange
+   };
+
+
+   return inputProps;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+import {useState, useEffect} from 'react' ;
+import ChatRoom from './ChatRoom.js';
+
+
+export default function App() {}
+
+
+
+
+
+
+
+
+/*
+Notice how you no longer nedd to know how "useChatRoom" works in order to use it.
+*/
+
+
+//when to use custom Hooks?
+
+
+
+
+function ShippingForm({ country }){
+   const [cities, setCities] = useState(null);
+
+
+   useEffect(() => {
+       let ignore = false;
+       fetch(`/api/cities?country=${country}`)
+           .then(response => response.json())
+           .then(json => {
+               if (!ignore) {
+                   setCities(json);
+               }
+           });
+       return () => {
+           ignore = true;
+       };
+   }, [country]);
+
+
+
+
+   const [city, setCity] = useState(null);
+   const [area, setArea] = useState(null);
+
+
+   useEffect(() => {
+       if (city) {
+           let ignore = false;
+           fetch(`/api/areas?city=${city}`)
+               .then(response => response.json())
+               .then(json => {
+                   if (!ignore){
+                       setArea(json);
+                   }
+               });
+           return () => {
+               ignore = true;
+           };
+       }
+   }, [city]);
+}
+
+
+
+
+
+
+function useData(url) {
+   const [data, setData] = useState(null);
+   useEffect(() => {
+       if (url) {
+           let ignore = false;
+           fetch(url)
+               .then(response => response.json())
+               .then(json => {
+                   if (!ignore) {
+                       setData(json);
+                   }
+               });
+           return () => {
+               ignore = true;
+           };
+       }
+   }, [url]);
+   return data;
+}
