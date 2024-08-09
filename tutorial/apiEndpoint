@@ -1,0 +1,38 @@
+api endpoints 만드는 법. next.js로..
+api handler를 한번 추가해 봅시ㅐ다. Hello world를 리턴하는 api 입니다.
+자..
+일단은
+/pages/api/hello-word.ts
+이런 파일을 하나 만들어 주세요.
+
+
+export default function helloWorldHandler(
+ req: NextApiRequest,
+ res: NextApiResponse,
+) {
+ res.send(`Hello World`);
+}
+
+
+API endpoint는 글로벌이예요! 그래서 이 위의 코드는 아무 HTTP 메서드에나 같은 응답을 반환할 거예요.
+
+
+만약 당신이 method에 따라 다르게 반응하는 api를 원한다면 switch.. statement를 추가해볼 수 있죠.
+
+
+export default function helloWorldHandler(
+ req: NextApiRequest,
+ res: NextApiResponse,
+) {
+ switch (req.method.toLowerCase()) {
+   case `get`:
+     return res.send(`Hello World`);
+  
+   case `post`:
+     // do something else
+   default:
+     // handle unsupported methods
+     return res.status(501).end();
+ }
+}
+
