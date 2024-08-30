@@ -4,7 +4,7 @@
 <Box display = 'grid' gridTemplateColumns = "repeat(12, 1fr)" gap = {2}>
     //grid로 배치할 건데 화면을 12개로 나누고 하나당 1프레임이라고 한다.
     <Box gridColumn = 'span 8'> 
-        //이 박스 컴포넌트는 그리드의 12개 열 중 8 개를 차지한다. 
+        //이 박스 컴포넌트는 그리드의 12개 열 중 8 개 만큼의 너비를 차지한다. 
         <Item>xs=8</Item>
     </Box>
 
